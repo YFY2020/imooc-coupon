@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `imooc_coupon_data`.`coupon_template` (
   KEY `idx_category` (`category`),
   KEY `idx_user_id` (`user_id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='优惠券模板表';
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='优惠券模板表';
 
 -- 清空表数据
 -- truncate coupon_template;
