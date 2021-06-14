@@ -1,6 +1,9 @@
 package com.imooc.coupon.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.imooc.coupon.constant.CouponStatus;
+import com.imooc.coupon.converter.CouponStatusConverter;
+import com.imooc.coupon.serialization.CouponSerialize;
 import com.imooc.coupon.vo.CouponTemplateSDK;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,6 +12,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
@@ -27,6 +31,7 @@ import java.util.Date;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "coupon")
+@JsonSerialize(using = CouponSerialize.class)
 public class Coupon {
 
     /** 自增主键 */
@@ -54,6 +59,7 @@ public class Coupon {
 
     /** 优惠券状态 */
     @Column(name = "status", nullable = false)
+    @Convert(converter = CouponStatusConverter.class)
     private CouponStatus status;
 
     /** 用户优惠券对应的模板信息 */
