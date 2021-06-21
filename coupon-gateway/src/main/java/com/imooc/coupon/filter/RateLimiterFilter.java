@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * <h1>限流过滤器</h1>
- * Created by Qinyi.
  */
 @Slf4j
 @Component

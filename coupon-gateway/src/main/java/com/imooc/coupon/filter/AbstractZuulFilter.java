@@ -6,7 +6,6 @@ import com.netflix.zuul.exception.ZuulException;
 
 /**
  * <h1>通用的抽象过滤器类</h1>
- * Created by Qinyi.
  */
 public abstract class AbstractZuulFilter extends ZuulFilter {
 

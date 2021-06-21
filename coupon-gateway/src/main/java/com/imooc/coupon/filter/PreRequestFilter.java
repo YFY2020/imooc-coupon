@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * <h1>在过滤器中存储客户端发起请求的时间戳</h1>
- * Created by Qinyi.
  */
 @Slf4j
 @Component
